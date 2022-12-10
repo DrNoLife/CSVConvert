@@ -186,7 +186,11 @@ public class ListCsvConvertTest
         };
 
         // Act.
-        var csv = _csvConverter.From().ListOfStrings(data).WithHeaders(headers).Convert();
+        var csv = _csvConverter
+            .From()
+            .ListOfStrings(data)
+            .WithHeaders(headers)
+            .Convert();
 
         // Assert.
         Console.WriteLine(csv.CsvData);
